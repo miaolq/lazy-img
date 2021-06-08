@@ -1,10 +1,9 @@
 # lazy-img
 
-React 版本的图片懒加载组件
+React 版本的图片懒加载组件 [示例]
 
 ## 特点
 
-- 不到 100 行
 - 使用简单，仅在 img 属性基础上新增了 lazy， nativeLazy 属性
 - lazy: 是否进行懒加载，nativeLazy: 如果懒加载，是否优先使用浏览器的 loading 属性实现
 - 优先使用浏览器的 loading 属性实现懒加载
@@ -34,3 +33,4 @@ React 版本的图片懒加载组件
 [react-component-library]: https://blog.harveydelaney.com/creating-your-own-react-component-library/
 [the-complete-guide-to-lazy-loading-images]: https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
 [browser-level-image-lazy-loading]: https://web.dev/browser-level-image-lazy-loading/
+[示例]: https://codepen.io/miaolq/pen/abJjNYm?editors=1010

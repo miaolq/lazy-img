@@ -1,3 +1,3 @@
 import LazyImg from './lazy-img/lazy-img'
-
-export { LazyImg }
+export { ReactImgProps, LoadingType, customObserver } from './lazy-img/lazy-img'
+export default LazyImg
