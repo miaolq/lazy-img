@@ -1,9 +1,9 @@
 {
-  "name": "react-img",
+  "name": "@matt.miao/react-img",
   "version": "1.0.0",
   "description": "React img component",
   "main": "build/cjs/index.js",
-  "module": "build/esm/index.es.js",
+  "module": "build/es/index.mjs",
   "files": [
     "build"
   ],

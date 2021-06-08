@@ -1,3 +1,3 @@
-import TestComponent from './TestComponent/TestComponent'
+import ReactImg from './react-img/react-img'
 
-export { TestComponent }
+export { ReactImg }
