@@ -13,7 +13,7 @@
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
-    "prepublishOnly": "npm run build"
+    "p-patch": "npm run build && npm version patch && npm publish --access=public"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
