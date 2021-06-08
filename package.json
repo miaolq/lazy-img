@@ -1,6 +1,6 @@
 {
   "name": "@matt.miao/lazy-img",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React img component",
   "main": "build/cjs/index.js",
   "module": "build/es/index.mjs",
