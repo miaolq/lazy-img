@@ -15,7 +15,7 @@ export interface ReactImgProps extends ReactImage {
 
 export type LoadingType = 'lazy' | 'eager'
 
-const cbKey = '__ReactImgIoCallback'
+export const cbKey = '__ReactImgIoCallback'
 const supportNativeLazy = 'loading' in HTMLImageElement.prototype
 const supportIo =
   'IntersectionObserver' in window && 'IntersectionObserverEntry' in window
@@ -29,7 +29,7 @@ if (supportIo) {
           const fn = entry.target[cbKey]
           fn()
           delete entry.target[cbKey]
-          observer.unobserve(entry.target)
+          ob.unobserve(entry.target)
         }
       })
     },
