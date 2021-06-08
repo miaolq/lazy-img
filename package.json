@@ -1,5 +1,5 @@
 {
-  "name": "@matt.miao/react-img",
+  "name": "@matt.miao/lazy-img",
   "version": "1.0.0",
   "description": "React img component",
   "main": "build/cjs/index.js",

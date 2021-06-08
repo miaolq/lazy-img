@@ -1,8 +1,8 @@
 import React from 'react'
-import ReactImg from './react-img'
+import LazyImg from './lazy-img'
 
 export default {
-  title: 'ReactImg',
+  title: 'LazyImg',
 }
 
 const imgs = []
@@ -21,7 +21,7 @@ export const Lazy = () => {
       <div>
         {imgs.map(item => (
           <div key={item}>
-            <ReactImg
+            <LazyImg
               lazy
               nativeLazy={false}
               src={item}

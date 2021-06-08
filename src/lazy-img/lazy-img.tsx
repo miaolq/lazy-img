@@ -45,7 +45,7 @@ export const customObserver = (ob: IntersectionObserver) => {
   observer = ob
 }
 
-const ReactImg: React.FC<ReactImgProps> = props => {
+const LazyImg: React.FC<ReactImgProps> = props => {
   const { src, srcSet, lazy = false, nativeLazy = true, ...rest } = props
 
   const ref = useRef()
@@ -85,4 +85,4 @@ const ReactImg: React.FC<ReactImgProps> = props => {
   return <img {...rest} {...inner} {...dataRef.current._loading} ref={ref} />
 }
 
-export default ReactImg
+export default LazyImg

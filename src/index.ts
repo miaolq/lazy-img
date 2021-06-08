@@ -1,3 +1,3 @@
-import ReactImg from './react-img/react-img'
+import LazyImg from './lazy-img/lazy-img'
 
-export { ReactImg }
+export { LazyImg }
