@@ -14,7 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "p-patch": "npm run build && npm version patch && npm publish --access=public",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "chromatic --exit-zero-on-changes --exit-once-uploaded main"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

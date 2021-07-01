@@ -15,32 +15,31 @@ export interface ReactImgProps extends ReactImage {
 }
 
 export type LoadingType = 'lazy' | 'eager'
-
 export const cbKey = '__ReactImgIoCallback'
+
 const supportNativeLazy = 'loading' in HTMLImageElement.prototype
 const supportIo =
   'IntersectionObserver' in window && 'IntersectionObserverEntry' in window
 
-let observer
-if (supportIo) {
-  observer = new IntersectionObserver(
-    (entries, ob) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting || entry.intersectionRatio) {
-          const fn = entry.target[cbKey]
-          fn()
-          delete entry.target[cbKey]
-          ob.unobserve(entry.target)
-        }
-      })
-    },
-    {
-      root: null,
-      rootMargin: '100px 100px',
-      threshold: 0,
-    }
-  )
-}
+let observer = supportIo
+  ? new IntersectionObserver(
+      (entries, ob) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting || entry.intersectionRatio) {
+            const fn = entry.target[cbKey]
+            fn()
+            delete entry.target[cbKey]
+            ob.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        root: null,
+        rootMargin: '100px 100px',
+        threshold: 0,
+      }
+    )
+  : null
 
 export const customObserver = (ob: IntersectionObserver) => {
   observer = ob
@@ -56,7 +55,7 @@ const LazyImg: React.FC<ReactImgProps> = props => {
     ...rest
   } = props
 
-  const ref = useRef()
+  const ref = useRef<HTMLImageElement>()
 
   const dataRef = useRef({
     _lazy: lazy,
@@ -83,7 +82,7 @@ const LazyImg: React.FC<ReactImgProps> = props => {
 
     if (_lazy && !_useNativeLazy && !_executed && observer) {
       observer.observe(ref.current)
-      ;(ref.current as any)[cbKey] = () => {
+      ref.current[cbKey] = () => {
         setInner({ src, srcSet })
         dataRef.current._executed = true
       }
