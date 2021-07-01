@@ -25,7 +25,7 @@ const imgs = [
 export const NativeLazy = () => {
   return (
     <>
-      图片懒加载测试(默认情况，使用浏览器loading：lazy属性自动懒加载)
+      <h1>图片懒加载(默认情况使用浏览器loading：lazy属性自动懒加载)</h1>
       <div>
         {imgs.map(item => (
           <div key={item}>
@@ -56,7 +56,7 @@ const imgs2 = [
 export const Lazy = () => {
   return (
     <>
-      图片懒加载测试（不使用loading属性，手动实现的懒加载）
+      <h1>图片懒加载（不使用loading属性，手动实现的懒加载）</h1>
       <div>
         {imgs2.map(item => (
           <div key={item}>
@@ -76,7 +76,7 @@ export const Lazy = () => {
 export const LazyWithPlaceholder = () => {
   return (
     <>
-      懒加载与占位图效果（placeholder需要与nativeLazy = false一起使用）
+      <h1>懒加载与占位图效果（placeholder需要与nativeLazy = false一起使用）</h1>
       <div>
         {imgs2.map(item => (
           <div key={item}>

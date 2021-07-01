@@ -12,8 +12,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
-    "storybook:export": "build-storybook",
-    "p-patch": "npm run build && npm version patch && npm publish --access=public"
+    "build-storybook": "build-storybook",
+    "p-patch": "npm run build && npm version patch && npm publish --access=public",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -38,6 +39,7 @@
     "@types/react": "^17.0.9",
     "babel-loader": "^8.2.2",
     "babel-preset-react-app": "^10.0.0",
+    "chromatic": "^5.9.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.4",
     "node-sass": "^6.0.0",

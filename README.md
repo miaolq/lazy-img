@@ -34,4 +34,4 @@ React 版本的图片懒加载组件 [示例]
 [react-component-library]: https://blog.harveydelaney.com/creating-your-own-react-component-library/
 [the-complete-guide-to-lazy-loading-images]: https://css-tricks.com/the-complete-guide-to-lazy-loading-images/
 [browser-level-image-lazy-loading]: https://web.dev/browser-level-image-lazy-loading/
-[示例]: https://codepen.io/miaolq/pen/abJjNYm?editors=1010
+[示例]: https://www.chromatic.com/component?appId=60dd56293e7bce003b03c3bd&name=LazyImg
