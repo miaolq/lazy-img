@@ -1,5 +1,7 @@
 # lazy-img
 
+[![Build Status](https://travis-ci.com/miaolq/lazy-img.svg?branch=main)](https://travis-ci.com/miaolq/lazy-img)
+
 React 版本的图片懒加载组件 [示例]
 
 ## 特点
