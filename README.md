@@ -19,7 +19,7 @@ React 版本的图片懒加载组件 [示例]
 
 ## todo
 
-- placeholder 或者 图片主题色
+- 图片主题色
 - 过度效果
 - 图片链接处理
 
@@ -28,6 +28,7 @@ React 版本的图片懒加载组件 [示例]
 - [react-component-library]
 - [the-complete-guide-to-lazy-loading-images]
 - [browser-level-image-lazy-loading]
+- [图片主题色占位符](https://manu.ninja/dominant-colors-for-lazy-loading-images/)
 
 [intersectionobserver polyfill]: https://github.com/w3c/IntersectionObserver/tree/main/polyfill
 [react-component-library]: https://blog.harveydelaney.com/creating-your-own-react-component-library/

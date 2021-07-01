@@ -4,9 +4,9 @@ module.exports = {
   stories: ['../src/**/*.stories.tsx'],
   // Add any Storybook addons you want here: https://storybook.js.org/addons/
   addons: [],
-  // typescript: {
-  //   reactDocgen: 'none',
-  // },
+  typescript: {
+    reactDocgen: 'none',
+  },
   webpackFinal: async config => {
     config.module.rules.push({
       test: /\.scss$/,

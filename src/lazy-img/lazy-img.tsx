@@ -11,6 +11,7 @@ type ReactImage = Omit<
 export interface ReactImgProps extends ReactImage {
   nativeLazy?: boolean
   lazy?: boolean
+  placeholder?: string
 }
 
 export type LoadingType = 'lazy' | 'eager'
@@ -46,7 +47,14 @@ export const customObserver = (ob: IntersectionObserver) => {
 }
 
 const LazyImg: React.FC<ReactImgProps> = props => {
-  const { src, srcSet, lazy = false, nativeLazy = true, ...rest } = props
+  const {
+    src,
+    srcSet,
+    lazy = false,
+    nativeLazy = true,
+    placeholder,
+    ...rest
+  } = props
 
   const ref = useRef()
 
@@ -63,6 +71,9 @@ const LazyImg: React.FC<ReactImgProps> = props => {
   const [inner, setInner] = useState(() => {
     if (!dataRef.current._lazy || dataRef.current._useNativeLazy) {
       return { src, srcSet }
+    }
+    if (placeholder) {
+      return { src: placeholder }
     }
     return {}
   })
