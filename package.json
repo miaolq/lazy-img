@@ -56,5 +56,8 @@
     "typescript": "^4.3.2"
   },
   "homepage": "https://github.com/miaolq/lazy-img",
-  "repository": "https://github.com/miaolq/lazy-img"
+  "repository": "https://github.com/miaolq/lazy-img",
+  "publishConfig": {
+    "access": "public"
+  }
 }

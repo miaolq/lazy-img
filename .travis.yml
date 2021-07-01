@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - '14.17'
+install: npm ci
+script: npm run test && npm run build
+deploy:
+  on:
+    tags: true
+  provider: npm
+  email: 'linqiangmiao@gmail.com'
+  api_key:
+    secure: ZGt/7FX+4g1ZjyagDlwrHwUylA+JY1bQO3kstbv+vRWc6tU+Bff1H2aeHVgHOQ2fBtDG2FSvcogRNOe8JgmAdIswqd0IRI9GLo/cpstAXpX9Gl5Nvs4ZZnv6gpQG2TpbBuFmBVHsGlRxt6N2uspy2/UW9dAy+pdwjJDSVo+7k+mknoa5zgNAZ+C7c6uqQXIMm4LAnl7EGb1KIaTLSRYA1iMLrvrZgQb2gfBLM7EeqOtpg4NtJzDIWAGai5Cg8Z5jO6rS14LVVE1Go821HXcQKpdN4xundncDsd6wblrPcNZDl2WqQxGIJT2XRpVAMyqONexMD3Yr8mJeXWz0PjcsRQYTv1SqoZJhVYesgMjc2DpjT9/mRqTLL/IvIrQFCyE+NbhsK7MZfyXJmULujhNGN8JiTiKqJmnUhTw+YV3SDfzpkQSB/hVyJ3pqGsx2CF2+uH5WZNG49/0rlrndplNXFmB5GdkBhzszuuUWXUyHLl/FMH6x73I+mOjGyAwk2j2c3dj5d1kPd4CjPDsHvjxqkd2lW9Jwl760Zm+F2Decr03Pl6k2ZiUiYPIhrdS+C8gNl8/IFA8RvkrBPRgccSRUTGXbKiHox74UOhQrCzFo7rFNr90eVs8Lj39aAg9o73dK/rptIkG/7HuBZ+MhrPcHRJOE+tFQ0roTIqscV8NkJ0Y=
