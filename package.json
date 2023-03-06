@@ -59,5 +59,8 @@
   "repository": "https://github.com/miaolq/lazy-img",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@storybook/addon-storysource": "^6.5.16"
   }
 }
